@@ -1,0 +1,10 @@
+---
+title: Home
+layout: default
+---
+<h1>{{site.hoffnung3000.title}}</h1>
+{% for event in site.data.events %}
+    <h2>{{ event.title | strip_html }}</h2>
+    <h3>{{event.time.from | date: "%b %d @ %H:%M"}}</h3>
+    <img style="width: 400px;" src="{{ event.imageUrl }}" alt="{{ event.imageUrl }}">
+{% endfor %}    
